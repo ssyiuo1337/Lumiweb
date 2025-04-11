@@ -192,6 +192,7 @@
     script.onload = () => {
       if (!document.querySelector('.cf-turnstile')) {
         const sitekey = import.meta.env.VITE_APP_TURNSTILE_SITEKEY;
+        console.log('Turnstile sitekey:', sitekey, typeof sitekey);
         window.turnstile.render('#turnstile-element', {
           sitekey: sitekey,
           callback: (token) => {
