@@ -38,7 +38,7 @@ class RegistrationViewSet(viewsets.ModelViewSet):
         # Проверяем, передан ли токен
         if not turnstile_token:
             return Response({'error': 'CAPTCHA token is missing'}, status=status.HTTP_400_BAD_REQUEST)
-        
+
         # Проверяем капчу через API Cloudflare
         captcha_valid = self.verify_turnstile(turnstile_token)
         if not captcha_valid:
@@ -50,7 +50,7 @@ class RegistrationViewSet(viewsets.ModelViewSet):
     def verify_turnstile(self, token):
         """Проверка капчи через API Cloudflare"""
         url = "https://challenges.cloudflare.com/turnstile/v0/siteverify"
-        secret_key = settings.CLOUDFLARE_TURNSTILE_SECRET_KEY 
+        secret_key = settings.TURNSTILE_SECRET_KEY
         data = {
             'secret': secret_key,
             'response': token
@@ -91,7 +91,7 @@ class CustomAuth(TokenObtainPairView):
             'access': str(refresh.access_token),
             'username': str(user.username)
         }, status=status.HTTP_200_OK)
-    
+
 class SetHWIDView(APIView):
     """Установка хвхида при первом запуске"""
 
@@ -109,7 +109,7 @@ class SetHWIDView(APIView):
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response({"success": "HWID set successfully."}, status=status.HTTP_200_OK)
-    
+
 
 class ChangePasswordView(generics.UpdateAPIView):
     """

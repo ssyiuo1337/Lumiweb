@@ -12,6 +12,8 @@ services:
     environment:
       - VITE_APP_API_URL=http://127.0.0.1:8000/api/v1/
       - VITE_APP_ROBLOX_INJECTOR=true
+      - VITE_APP_TURNSTILE_SITEKEY=0x4AAAAAABD6_xW0TcNKIpLl
+
     networks:
       - app-network
 
@@ -31,6 +33,7 @@ services:
       - CORS_ALLOWED_METHODS=GET,POST,PUT,PATCH,DELETE,OPTIONS
       - CORS_ALLOWED_HEADERS=Content-Type,Authorization
       - CORS_ALLOW_CREDENTIALS=true
+      - TURNSTILE_SECRET_KEY=0x4AAAAAABD6_4MwCRDtOCH3yr4pj-Muyao
     networks:
       - app-network
 

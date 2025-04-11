@@ -217,6 +217,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
-CLOUDFLARE_TURNSTILE_SECRET_KEY = 'hui vam'
+# Cloudflare Turnstile settings
+TURNSTILE_SITE_KEY = os.environ.get('TURNSTILE_SITE_KEY', 'your_site_key_here')
+TURNSTILE_SECRET_KEY = os.environ.get('TURNSTILE_SECRET_KEY', 'your_secret_key_here')

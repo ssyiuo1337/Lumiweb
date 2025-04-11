@@ -190,9 +190,9 @@
     document.head.appendChild(script);
 
     script.onload = () => {
-      if (!document.querySelector('.cf-turnstile responce')) {
+      if (!document.querySelector('.cf-turnstile')) {
         window.turnstile.render('#turnstile-element', {
-          sitekey: '0x4AAAAAABD6_xW0TcNKIpLl',
+          sitekey: import.meta.env.VITE_APP_TURNSTILE_SITEKEY,
           callback: (token) => {
             turnstileResponse.value = token;
           }
