@@ -199,7 +199,13 @@
 
   const initializeTurnstile = () => {
     const sitekey = import.meta.env.VITE_APP_TURNSTILE_SITEKEY;
-    console.log('Initializing Turnstile with sitekey:', sitekey);
+    console.log('Environment variables:', import.meta.env);
+    console.log('Turnstile sitekey:', sitekey, typeof sitekey);
+
+    if (!sitekey) {
+      console.error('Turnstile sitekey is not defined in environment variables');
+      return;
+    }
 
     if (typeof sitekey !== 'string') {
       console.error('Invalid sitekey type:', typeof sitekey);
