@@ -1,127 +1,38 @@
-# LumiWeb
+# dw-front
 
-Проект представляет собой веб-приложение с разделением на фронтенд и бэкенд части.
+vue3 + typescript
 
-## Структура проекта
+tailwind css for UI
 
-```
-lumiweb/
-├── front/                 # Frontend часть (Vue.js + TypeScript)
-│   ├── src/              # Исходный код фронтенда
-│   ├── public/           # Статические файлы
-│   └── package.json      # Зависимости фронтенда
-│
-└── backend/              # Backend часть (Django)
-    ├── authorization/    # Модуль авторизации
-    ├── subscription/     # Модуль подписок
-    ├── user_statistics/  # Модуль статистики пользователей
-    ├── payment/          # Модуль платежей
-    ├── file_system/      # Модуль файловой системы
-    └── dw_backend/       # Основные настройки Django
-```
+pinia store for state management
 
-## Технологии
+github actions for fast docker deploy 
+## next - default vite text ------->
 
-### Frontend
-- Vue.js 3
-- TypeScript
-- Tailwind CSS
-- Vite
-- Cloudflare Turnstile для CAPTCHA
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-### Backend
-- Django 5.1
-- Django REST Framework
-- JWT аутентификация
-- MySQL
-- PyMySQL
+## Type Support for `.vue` Imports in TS
 
-## Установка и запуск
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-### Backend
+## Customize configuration
 
-1. Установите зависимости:
-```bash
-cd backend
-pip install -r requirements.txt
-```
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-2. Настройте базу данных в `dw_backend/settings.py`
+## Project Setup
 
-3. Примените миграции:
-```bash
-python manage.py migrate
-```
-
-4. Запустите сервер разработки:
-```bash
-python manage.py runserver
-```
-
-### Frontend
-
-1. Установите зависимости:
-```bash
-cd front
+```sh
 npm install
 ```
 
-2. Запустите сервер разработки:
-```bash
+### Compile and Hot-Reload for Development
+
+```sh
 npm run dev
 ```
 
-## Функциональность
+### Type-Check, Compile and Minify for Production
 
-### Авторизация
-- Регистрация с проверкой CAPTCHA
-- Вход по email/username
-- JWT аутентификация
-- Смена пароля
-- Управление HWID
-
-### Подписки
-- Система подписок
-- Управление статусом подписки
-- Отслеживание сроков подписки
-
-### Статистика
-- Отслеживание времени использования
-- Система рефералов
-- Статистика запусков
-
-### Платежи
-- Интеграция с платежными системами
-- Обработка платежей
-- Управление транзакциями
-
-## Конфигурация
-
-### Backend
-- Настройки базы данных в `dw_backend/settings.py`
-- Ключи API в переменных окружения
-- Настройки JWT в `SIMPLE_JWT`
-
-### Frontend
-- Конфигурация Vite в `vite.config.ts`
-- Настройки Tailwind в `tailwind.config.js`
-- Переменные окружения в `.env.development` и `.env.production`
-
-## Развертывание
-
-Проект поддерживает развертывание через Docker:
-- `front/Dockerfile` для фронтенда
-- `backend/Dockerfile` для бэкенда
-
-## Безопасность
-
-- JWT аутентификация
-- CSRF защита
-- CORS настройки
-- CAPTCHA защита
-- HWID проверка
-- Безопасное хранение паролей
-
-## Лицензия
-
-[Укажите вашу лицензию]
+```sh
+npm run build
+```

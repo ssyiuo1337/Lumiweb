@@ -15,7 +15,7 @@ const messages = {
 
     adventages: {
       title: 'About Us',
-      title2: 'Why DrainWalk?',
+      title2: 'Why Lumia?',
       first: {
         name: 'Performance',
         text: 'With DW Cleaner, your computer will always run faster, as our program effectively removes unnecessary files and junk, freeing up system resources'
@@ -37,7 +37,7 @@ const messages = {
     },
 
     title: {
-      first: 'Get DrainWalk Cleaner.',
+      first: 'Get Lumia.',
       second: 'Unique product on market',
       button: 'Get it',
     },
@@ -58,12 +58,12 @@ const messages = {
 
     faq: {
       title: 'Frequently Asked Questions',
-      q1: 'How to launch Drainwalk Software after Purchase?',
-      a1: 'After purchasing a subscription, download the installer from your profile and run it. The program will be installed on your computer, and "DrainWalk" will appear in your applications list. Use it to launch our software.',
+      q1: 'How to launch Lumia Web after Purchase?',
+      a1: 'After purchasing a subscription, download the installer from your profile and run it. The program will be installed on your computer, and "Lumia Web" will appear in your applications list. Use it to launch our software.',
       q2: 'How can I contact Support?',
       a2: 'You can contact support in our Discord channel or in our Telegram chat.',
       q3: 'How do I update my Profile Information?',
-      a3: 'Your profile information is updated automatically. You do not need to do anything. We advise you not to forcefully turn off Drainwalk (alt + f4) as information about the session may not be saved.',
+      a3: 'Your profile information is updated automatically. You do not need to do anything. We advise you not to forcefully turn off Lumia Web (alt + f4) as information about the session may not be saved.',
       q4: 'Who can see my Profile Information?',
       a4: 'Clients can view public information about any user by entering their usernames in the URL. However, your private information (Email, HWID, Password) remains visible only to you.'
     },
@@ -73,7 +73,7 @@ const messages = {
       date: '29.08.2024',
       section1: {
         title: '1. Introduction',
-        text: 'Welcome to DrainWalk ("we," "our," or "us"). We are committed to protecting your privacy and ensuring a safe online experience for all our users. This Privacy Policy outlines how we collect, use, and protect your personal information when you interact with our website and services.',
+        text: 'Welcome to Lumia ("we," "our," or "us"). We are committed to protecting your privacy and ensuring a safe online experience for all our users. This Privacy Policy outlines how we collect, use, and protect your personal information when you interact with our website and services.',
       },
       section2: {
         title: '2. Information We Collect',
@@ -127,7 +127,7 @@ const messages = {
       date: '29.08.2024',
       section1: {
         title: '1. Prohibited Activities',
-        text: 'Users of DrainWalk are prohibited from:',
+        text: 'Users of Lumia are prohibited from:',
         editingFiles: 'Editing Files',
         editingFilesDesc: 'You are not allowed to modify any files related to the launcher, website, or software.',
         hacking: 'Hacking or Cracking',
@@ -143,7 +143,7 @@ const messages = {
       },
       section3: {
         title: '3. Compliance',
-        text: 'By using DrainWalk, you agree to comply with these rules and any other policies or guidelines provided by us.',
+        text: 'By using Lumia, you agree to comply with these rules and any other policies or guidelines provided by us.',
       },
       section4: {
         title: '4. Contact Information',
@@ -156,7 +156,7 @@ const messages = {
       date: '29.08.2024',
       section1: {
         title: '1. Introduction',
-        text: 'These Terms of Service ("Terms") govern your use of the DrainWalk website and services ("Services"). By accessing or using our Services, you agree to be bound by these Terms.',
+        text: 'These Terms of Service ("Terms") govern your use of the Lumia website and services ("Services"). By accessing or using our Services, you agree to be bound by these Terms.',
       },
       section2: {
         title: '2. User Accounts',
@@ -185,7 +185,7 @@ const messages = {
       },
       section6: {
         title: '6. Limitation of Liability',
-        text: 'To the maximum extent permitted by law, DrainWalk will not be liable for any indirect, incidental, or consequential damages arising out of or in connection with your use of our Services.',
+        text: 'To the maximum extent permitted by law, Lumia will not be liable for any indirect, incidental, or consequential damages arising out of or in connection with your use of our Services.',
       },
       section7: {
         title: '7. Termination',
@@ -223,14 +223,14 @@ const messages = {
     },
 
     title: {
-      first: 'Получите DrainWalk Cleaner.',
+      first: 'Получите Lumia.',
       second: 'Уникальный в своем роде продукт',
       button: 'Получить',
     },
 
     adventages: {
       title: 'О нас',
-      title2: 'Почему DrainWalk?',
+      title2: 'Почему Lumia?',
       first: {
         name: 'Производительность',
         text: 'С DW Cleaner ваш компьютер всегда будет работать быстрее, так как наша программа эффективно удаляет ненужные файлы и мусор, освобождая ресурсы системы.'
@@ -255,7 +255,7 @@ const messages = {
       title: "Фидбек",
       title2: "Что Говорят Пользователи",
     },
-    
+
     pricing: {
       title: "Покупка",
       title2: "Выберите план",
@@ -267,12 +267,12 @@ const messages = {
 
     faq: {
       title: 'Часто задаваемые вопросы',
-      q1: 'Как запустить Drainwalk после покупки?',
-      a1: 'После покупки подписки загрузите установщик из вашего профиля и запустите его. Программа будет установлена на ваш компьютер, и "DrainWalk" появится в списке приложений. Используйте его для запуска нашего ПО.',
+      q1: 'Как запустить Lumia после покупки?',
+      a1: 'После покупки подписки загрузите установщик из вашего профиля и запустите его. Программа будет установлена на ваш компьютер, и "Lumia" появится в списке приложений. Используйте его для запуска нашего ПО.',
       q2: 'Как я могу связаться с поддержкой?',
       a2: 'Вы можете обратиться в поддержку через наш Discord-канал или в Telegram-чате.',
       q3: 'Как обновить информацию в профиле?',
-      a3: 'Информация в вашем профиле обновляется автоматически. Вам не нужно ничего делать. Мы советуем не завершать работу Drainwalk принудительно (alt + f4), так как информация о сессии может не сохраниться.',
+      a3: 'Информация в вашем профиле обновляется автоматически. Вам не нужно ничего делать. Мы советуем не завершать работу Lumia принудительно (alt + f4), так как информация о сессии может не сохраниться.',
       q4: 'Кто может видеть мою информацию профиля?',
       a4: 'Клиенты могут видеть публичную информацию о любом пользователе, введя его имя пользователя в URL. Однако ваша личная информация (Email, HWID, Пароль) остается видимой только для вас.'
     },
@@ -282,7 +282,7 @@ const messages = {
       date: '29.08.2024',
       section1: {
         title: '1. Введение',
-        text: 'Добро пожаловать в DrainWalk ("мы", "наш" или "нас"). Мы стремимся защитить вашу конфиденциальность и обеспечить безопасный онлайн-опыт для всех наших пользователей. В данной Политике конфиденциальности описывается, как мы собираем, используем и защищаем вашу личную информацию при взаимодействии с нашим сайтом и услугами.',
+        text: 'Добро пожаловать в Lumia ("мы", "наш" или "нас"). Мы стремимся защитить вашу конфиденциальность и обеспечить безопасный онлайн-опыт для всех наших пользователей. В данной Политике конфиденциальности описывается, как мы собираем, используем и защищаем вашу личную информацию при взаимодействии с нашим сайтом и услугами.',
       },
       section2: {
         title: '2. Информация, которую мы собираем',
@@ -336,7 +336,7 @@ const messages = {
       date: '29.08.2024',
       section1: {
         title: '1. Запрещенные действия',
-        text: 'Пользователям DrainWalk запрещается:',
+        text: 'Пользователям Lumia запрещается:',
         editingFiles: 'Изменение файлов',
         editingFilesDesc: 'Запрещается изменять любые файлы, связанные с лаунчером, веб-сайтом или программным обеспечением.',
         hacking: 'Взлом или взлом программного обеспечения',
@@ -352,7 +352,7 @@ const messages = {
       },
       section3: {
         title: '3. Соблюдение',
-        text: 'Используя DrainWalk, вы соглашаетесь соблюдать эти правила и любые другие политики или рекомендации, предоставленные нами.',
+        text: 'Используя Lumia, вы соглашаетесь соблюдать эти правила и любые другие политики или рекомендации, предоставленные нами.',
       },
       section4: {
         title: '4. Контактная информация',
@@ -365,7 +365,7 @@ const messages = {
       date: '29.08.2024',
       section1: {
         title: '1. Введение',
-        text: 'Эти Условия использования ("Условия") регулируют ваше использование веб-сайта и услуг DrainWalk ("Услуги"). Доступ к нашим Услугам или их использование означает, что вы соглашаетесь соблюдать эти Условия.',
+        text: 'Эти Условия использования ("Условия") регулируют ваше использование веб-сайта и услуг Lumia ("Услуги"). Доступ к нашим Услугам или их использование означает, что вы соглашаетесь соблюдать эти Условия.',
       },
       section2: {
         title: '2. Пользовательские аккаунты',
@@ -383,7 +383,7 @@ const messages = {
       },
       section4: {
         title: '4. Интеллектуальная собственность',
-        text: 'Все контенты и материалы, доступные на нашем веб-сайте, включая, но не ограничиваясь текстом, графикой, логотипами и программным обеспечением, являются собственностью DrainWalk или наших лицензиаров и защищены законами об интеллектуальной собственности.',
+        text: 'Все контенты и материалы, доступные на нашем веб-сайте, включая, но не ограничиваясь текстом, графикой, логотипами и программным обеспечением, являются собственностью Lumia или наших лицензиаров и защищены законами об интеллектуальной собственности.',
       },
       section5: {
         title: '5. Политика оплаты и возвратов',
@@ -394,7 +394,7 @@ const messages = {
       },
       section6: {
         title: '6. Ограничение ответственности',
-        text: 'В максимальной степени, разрешенной законом, DrainWalk не несет ответственности за любые косвенные, случайные или сопутствующие убытки, возникающие из-за или в связи с использованием вами наших Услуг.',
+        text: 'В максимальной степени, разрешенной законом, Lumia не несет ответственности за любые косвенные, случайные или сопутствующие убытки, возникающие из-за или в связи с использованием вами наших Услуг.',
       },
       section7: {
         title: '7. Прекращение',
@@ -412,8 +412,8 @@ const messages = {
 
     footer: {
       contact_email: "Контактный email ",
-      copyright: "Авторские права © 2022-2024",
-      design_by: "ЛУЧШИЕ КРИПТО СИГНАЛЫ",
+      copyright: "Авторские права © 2025",
+      design_by: "by ssyiuo",
       privacy_policy: "Политика конфиденциальности",
       terms_of_service: "Условия обслуживания",
       rules_of_use: "Правила использования"
