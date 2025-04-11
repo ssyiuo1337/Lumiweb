@@ -160,13 +160,10 @@
 
     try {
       loading.value = true
-      // Send registration data along with CAPTCHA response to backend
       await AuthService.register(username.value, password.value, email.value, turnstileResponse.value);
 
-      // Fetch user data after successful registration
       await store.fetchPrivateUserInfo();
 
-      // Close the registration popup and redirect to profile page
       closePopup();
       router.push({ name: 'profile', params: { username: username.value } });
     } catch (error) {
@@ -181,26 +178,44 @@
     }
   };
 
-  // Mount Turnstile script when component is mounted
   onMounted(() => {
-    loading.value = false
-    const script = document.createElement('script');
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-    script.async = true;
-    document.head.appendChild(script);
+    loading.value = false;
 
-    script.onload = () => {
-      if (!document.querySelector('.cf-turnstile')) {
-        const sitekey = import.meta.env.VITE_APP_TURNSTILE_SITEKEY;
-        console.log('Turnstile sitekey:', sitekey, typeof sitekey);
-        window.turnstile.render('#turnstile-element', {
-          sitekey: sitekey,
-          callback: (token) => {
-            turnstileResponse.value = token;
-          }
-        });
-      }
-    };
+    if (!document.querySelector('script[src="https://challenges.cloudflare.com/turnstile/v0/api.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      script.async = true;
+      script.defer = true;
+
+      script.onload = () => {
+        initializeTurnstile();
+      };
+
+      document.head.appendChild(script);
+    } else {
+      initializeTurnstile();
+    }
   });
+
+  const initializeTurnstile = () => {
+    const sitekey = import.meta.env.VITE_APP_TURNSTILE_SITEKEY;
+    console.log('Initializing Turnstile with sitekey:', sitekey);
+
+    if (typeof sitekey !== 'string') {
+      console.error('Invalid sitekey type:', typeof sitekey);
+      return;
+    }
+
+    try {
+      window.turnstile.render('#turnstile-element', {
+        sitekey: sitekey,
+        callback: (token) => {
+          turnstileResponse.value = token;
+        }
+      });
+    } catch (error) {
+      console.error('Turnstile initialization error:', error);
+    }
+  };
 
   </script>
