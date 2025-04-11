@@ -15,18 +15,18 @@ const messages = {
 
     adventages: {
       title: 'About Us',
-      title2: 'Why Lumia?',
+      title2: 'Why Lumia Roblox Injector?',
       first: {
         name: 'Performance',
-        text: 'With DW Cleaner, your computer will always run faster, as our program effectively removes unnecessary files and junk, freeing up system resources'
+        text: 'With Lumia Roblox Injector, your Roblox experience will be enhanced with powerful features and optimized performance'
       },
       second: {
-        name: 'Storage',
-        text: "Enjoy superior cleaning features. We've paid special attention to freeing up disk space, which helps your PC run more efficiently."
+        name: 'Security',
+        text: "Enjoy advanced security features. We've implemented robust protection to ensure your account stays safe while using our injector."
       },
       third: {
-        name: 'Optimization',
-        text: 'We also offer optimization features that make your system boot faster, improving performance even on older computers.'
+        name: 'Features',
+        text: 'Access a wide range of exclusive features and scripts that will take your Roblox gaming to the next level.'
       },
       stat: {
         users: 'Users:',
@@ -37,13 +37,13 @@ const messages = {
     },
 
     title: {
-      first: 'Get Lumia.',
-      second: 'Unique product on market',
+      first: 'Get Lumia Roblox Injector.',
+      second: 'Premium Roblox Experience',
       button: 'Get it',
     },
 
     feadback: {
-      title: "FeadBack",
+      title: "Feedback",
       title2: "What Our Users Say",
     },
 
@@ -51,19 +51,19 @@ const messages = {
       title: "Pricing",
       title2: "Select a Subscription",
       month: "1 month",
-      three_months: "3 month",
+      three_months: "3 months",
       year: "12 months",
       button: 'Buy'
     },
 
     faq: {
       title: 'Frequently Asked Questions',
-      q1: 'How to launch Lumia Web after Purchase?',
-      a1: 'After purchasing a subscription, download the installer from your profile and run it. The program will be installed on your computer, and "Lumia Web" will appear in your applications list. Use it to launch our software.',
+      q1: 'How to use Lumia Roblox Injector?',
+      a1: 'After purchasing a subscription, download the injector from your profile and run it. The program will be installed on your computer, and you can use it to enhance your Roblox experience.',
       q2: 'How can I contact Support?',
       a2: 'You can contact support in our Discord channel or in our Telegram chat.',
       q3: 'How do I update my Profile Information?',
-      a3: 'Your profile information is updated automatically. You do not need to do anything. We advise you not to forcefully turn off Lumia Web (alt + f4) as information about the session may not be saved.',
+      a3: 'Your profile information is updated automatically. We advise you not to forcefully close the injector (alt + f4) as information about the session may not be saved.',
       q4: 'Who can see my Profile Information?',
       a4: 'Clients can view public information about any user by entering their usernames in the URL. However, your private information (Email, HWID, Password) remains visible only to you.'
     },
@@ -223,25 +223,25 @@ const messages = {
     },
 
     title: {
-      first: 'Получите Lumia.',
-      second: 'Уникальный в своем роде продукт',
+      first: 'Получите Lumia Roblox Injector.',
+      second: 'Премиум опыт в Roblox',
       button: 'Получить',
     },
 
     adventages: {
       title: 'О нас',
-      title2: 'Почему Lumia?',
+      title2: 'Почему Lumia Roblox Injector?',
       first: {
         name: 'Производительность',
-        text: 'С DW Cleaner ваш компьютер всегда будет работать быстрее, так как наша программа эффективно удаляет ненужные файлы и мусор, освобождая ресурсы системы.'
+        text: 'С Lumia Roblox Injector ваш опыт в Roblox будет улучшен благодаря мощным функциям и оптимизированной производительности'
       },
       second: {
-        name: 'Хранилище',
-        text: "Оцените превосходные функции очистки. Мы уделили особое внимание освобождению места на диске, что помогает вашему ПК работать более эффективно."
+        name: 'Безопасность',
+        text: "Наслаждайтесь продвинутыми функциями безопасности. Мы внедрили надежную защиту, чтобы ваш аккаунт оставался в безопасности при использовании нашего инжектора."
       },
       third: {
-        name: 'Оптимизация',
-        text: 'Мы также предлагаем функции оптимизации, которые ускоряют загрузку системы, улучшая производительность даже на старых компьютерах.'
+        name: 'Функции',
+        text: 'Получите доступ к широкому спектру эксклюзивных функций и скриптов, которые выведут вашу игру в Roblox на новый уровень.'
       },
       stat: {
         users: 'Пользователей:',
@@ -252,7 +252,7 @@ const messages = {
     },
 
     feadback: {
-      title: "Фидбек",
+      title: "Отзывы",
       title2: "Что Говорят Пользователи",
     },
 
@@ -261,18 +261,18 @@ const messages = {
       title2: "Выберите план",
       month: "1 месяц",
       three_months: "3 месяца",
-      year: "12 месяцов",
+      year: "12 месяцев",
       button: 'Купить'
     },
 
     faq: {
       title: 'Часто задаваемые вопросы',
-      q1: 'Как запустить Lumia после покупки?',
-      a1: 'После покупки подписки загрузите установщик из вашего профиля и запустите его. Программа будет установлена на ваш компьютер, и "Lumia" появится в списке приложений. Используйте его для запуска нашего ПО.',
+      q1: 'Как использовать Lumia Roblox Injector?',
+      a1: 'После покупки подписки загрузите инжектор из вашего профиля и запустите его. Программа будет установлена на ваш компьютер, и вы сможете использовать её для улучшения вашего опыта в Roblox.',
       q2: 'Как я могу связаться с поддержкой?',
       a2: 'Вы можете обратиться в поддержку через наш Discord-канал или в Telegram-чате.',
       q3: 'Как обновить информацию в профиле?',
-      a3: 'Информация в вашем профиле обновляется автоматически. Вам не нужно ничего делать. Мы советуем не завершать работу Lumia принудительно (alt + f4), так как информация о сессии может не сохраниться.',
+      a3: 'Информация в вашем профиле обновляется автоматически. Мы советуем не завершать работу инжектора принудительно (alt + f4), так как информация о сессии может не сохраниться.',
       q4: 'Кто может видеть мою информацию профиля?',
       a4: 'Клиенты могут видеть публичную информацию о любом пользователе, введя его имя пользователя в URL. Однако ваша личная информация (Email, HWID, Пароль) остается видимой только для вас.'
     },

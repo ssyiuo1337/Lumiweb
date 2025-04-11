@@ -1,28 +1,20 @@
-FROM python:3.12-alpine
+FROM python:3.11-slim
 
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONDONTWRITEBYTECODE=1
-
-RUN apk update \
-    && apk add --no-cache \
-        build-base \
-        mariadb-connector-c-dev \
-        mariadb-dev \
-        libffi-dev \
-        openssl-dev \
-        pkgconfig \
-        bash
-
-# Обновление pip python
-RUN pip install --upgrade pip
 WORKDIR /app
 
-# Установка пакетов для проекта
-COPY requirements.txt /app/
-RUN pip install -r requirements.txt
+# Установка зависимостей
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-ADD . /app/
+# Копирование кода приложения
+COPY . .
 
+# Создание и применение миграций
+RUN python manage.py makemigrations
+RUN python manage.py migrate
+
+# Сборка статических файлов
 RUN python manage.py collectstatic --noinput
 
-EXPOSE 8000
+# Запуск приложения
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
