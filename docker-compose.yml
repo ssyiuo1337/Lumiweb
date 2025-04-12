@@ -3,22 +3,18 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: .
+      context: ./frontend
       dockerfile: Dockerfile
     container_name: frontend
     restart: always
-    ports:
-      - "80:80"
     volumes:
-      - ./src:/app/src
-      - ./public:/app/public
-      - ./package.json:/app/package.json
-      - ./package-lock.json:/app/package-lock.json
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - ./frontend/package.json:/app/package.json
+      - ./frontend/package-lock.json:/app/package-lock.json
     environment:
-      - VITE_APP_API_URL=https://projectcube.tech/api/v1/
+      - VITE_APP_API_URL=http://nginx/api/v1/
       - VITE_APP_TURNSTILE_SITEKEY=0x4AAAAAABD6_xW0TcNKIpLl
-    depends_on:
-      - backend
     networks:
       - app-network
 
@@ -28,21 +24,17 @@ services:
       dockerfile: Dockerfile
     container_name: backend
     restart: always
-    ports:
-      - "8000:8000"
     volumes:
       - static_volume:/app/static
       - media_volume:/app/media
     environment:
       - DEBUG=False
-      - ALLOWED_HOSTS=projectcube.tech,localhost,127.0.0.1,backend
+      - ALLOWED_HOSTS=projectcube.tech,localhost,127.0.0.1,backend,nginx
       - DATABASE_URL=mysql://gen_user:qcs3pk33@5.129.198.116:3306/default_db
       - TURNSTILE_SITE_KEY=0x4AAAAAABD6_xW0TcNKIpLl
       - TURNSTILE_SECRET_KEY=0x4AAAAAABD6_4MwCRDtOCH3yr4pj-Muyao
       - CORS_ALLOWED_ORIGINS=https://projectcube.tech,http://localhost:5173
       - CORS_ALLOW_CREDENTIALS=True
-    depends_on:
-      - nginx
     networks:
       - app-network
     env_file:
