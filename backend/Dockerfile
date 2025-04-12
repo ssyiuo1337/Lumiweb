@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 # Установка зависимостей Python
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir django-cors-headers
+RUN pip install --no-cache-dir django-cors-headers gunicorn
 
 # Копирование кода приложения
 COPY . .
@@ -24,7 +24,7 @@ RUN python manage.py migrate
 RUN python manage.py collectstatic --noinput
 
 # Создание директории для логов
-RUN mkdir -p /var/log/roblox_injector
+RUN mkdir -p /var/log/dw_backend
 
-# Запуск приложения
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Запуск приложения через gunicorn
+CMD ["gunicorn", "dw_backend.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4", "--timeout", "120"]

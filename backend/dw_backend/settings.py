@@ -18,14 +18,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6#r5tc_y-)(y6wha^8aj7vj(ia=@(+jsmyge!r07h6oj&*e^f#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1', 'drainwalk.tech', 'frontend']
+DEBUG = False
+ALLOWED_HOSTS = ['projectcube.tech', 'localhost', '127.0.0.1', 'backend']
 
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
-    'https://projectcube.tech/',
-    'https://projectcube.tech/api/v1',
-    'https://projectcube.tech/api/v1',
+    'https://projectcube.tech',
     'http://localhost',
     'http://127.0.0.1',
     'http://backend',
@@ -72,10 +70,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    'https://projectcube.tech',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'https://projectcube.tech',
-    'http://projectcube.tech',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
