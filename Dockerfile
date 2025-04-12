@@ -1,10 +1,11 @@
 # этап сборки
-FROM node:lts-alpine as build-stage
+FROM node:18-alpine
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build
+EXPOSE 5173
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
 
 # этап production
 FROM nginx:stable-alpine as production-stage
