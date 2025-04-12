@@ -23,7 +23,9 @@ ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1', 'drainwalk.tech', 'fronten
 
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
-    'https://drainwalk.tech',
+    'https://projectcube.tech/',
+    'https://projectcube.tech/api/v1',
+    'https://projectcube.tech/api/v1',
     'http://localhost',
     'http://127.0.0.1',
     'http://backend',
