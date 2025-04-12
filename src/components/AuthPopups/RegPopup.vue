@@ -97,7 +97,7 @@
   </template>
 
   <script setup lang="ts">
-  import { ref, onMounted } from 'vue';
+  import { ref, onMounted, onUnmounted } from 'vue';
   import { useRouter } from 'vue-router';
   import { notify } from "@kyvg/vue3-notification";
   import AuthService from '@/services/AuthService';
@@ -119,25 +119,26 @@
   }
 
   const store = useUserStore();
-  const emit = defineEmits(['close-popup', 'open-login']); // Event emitter
+  const emit = defineEmits(['close-popup', 'open-login']);
   const router = useRouter();
-  const loading = ref(false)
+  const loading = ref(false);
+  const turnstileInitialized = ref(false);
 
   const username = ref<string>('');
   const email = ref<string>('');
   const password = ref<string>('');
-  const turnstileResponse = ref<string>('');  // Добавляем реактивную переменную для токена
+  const turnstileResponse = ref<string>('');
 
   const closePopup = () => {
     emit('close-popup');
-  }
+  };
+
   const openLogin = () => {
     emit('open-login');
-  }
+  };
 
   // Register new user
   const register = async () => {
-    // Validate form fields
     if (!username.value || !email.value || !password.value) {
       notify({
         group: "auth_error",
@@ -159,15 +160,13 @@
     }
 
     try {
-      loading.value = true
+      loading.value = true;
       await AuthService.register(username.value, password.value, email.value, turnstileResponse.value);
-
       await store.fetchPrivateUserInfo();
-
       closePopup();
       router.push({ name: 'profile', params: { username: username.value } });
     } catch (error) {
-      loading.value = false
+      loading.value = false;
       notify({
         group: "auth_error",
         type: "error",
@@ -175,6 +174,33 @@
         text: "Some server error. Try again later",
       });
       console.error('Registration failed:', error);
+    }
+  };
+
+  const initializeTurnstile = () => {
+    if (turnstileInitialized.value) return;
+
+    const sitekey = import.meta.env.VITE_APP_TURNSTILE_SITEKEY;
+    console.log('Initializing Turnstile with sitekey:', sitekey);
+
+    if (!sitekey) {
+      console.error('Turnstile sitekey is not defined in environment variables');
+      return;
+    }
+
+    try {
+      const element = document.getElementById('turnstile-element');
+      if (element && !element.querySelector('.cf-turnstile')) {
+        window.turnstile.render('#turnstile-element', {
+          sitekey: sitekey,
+          callback: (token) => {
+            turnstileResponse.value = token;
+          }
+        });
+        turnstileInitialized.value = true;
+      }
+    } catch (error) {
+      console.error('Turnstile initialization error:', error);
     }
   };
 
@@ -197,31 +223,12 @@
     }
   });
 
-  const initializeTurnstile = () => {
-    const sitekey = import.meta.env.VITE_APP_TURNSTILE_SITEKEY;
-    console.log('Environment variables:', import.meta.env);
-    console.log('Turnstile sitekey:', sitekey, typeof sitekey);
-
-    if (!sitekey) {
-      console.error('Turnstile sitekey is not defined in environment variables');
-      return;
+  onUnmounted(() => {
+    const element = document.getElementById('turnstile-element');
+    if (element) {
+      element.innerHTML = '';
     }
-
-    if (typeof sitekey !== 'string') {
-      console.error('Invalid sitekey type:', typeof sitekey);
-      return;
-    }
-
-    try {
-      window.turnstile.render('#turnstile-element', {
-        sitekey: sitekey,
-        callback: (token) => {
-          turnstileResponse.value = token;
-        }
-      });
-    } catch (error) {
-      console.error('Turnstile initialization error:', error);
-    }
-  };
+    turnstileInitialized.value = false;
+  });
 
   </script>
